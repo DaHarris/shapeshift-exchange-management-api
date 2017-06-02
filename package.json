@@ -1,5 +1,5 @@
 {
-  "name": "shapeshift-external-api",
+  "name": "shapeshift-exchange-management-api",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DaHarris/shapeshift-external-api.git"
+    "url": "git+https://github.com/DaHarris/shapeshift-exchange-management-api.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DaHarris/shapeshift-external-api/issues"
+    "url": "https://github.com/DaHarris/shapeshift-exchange-management-api/issues"
   },
-  "homepage": "https://github.com/DaHarris/shapeshift-external-api#readme",
+  "homepage": "https://github.com/DaHarris/shapeshift-exchange-management-api#readme",
   "dependencies": {
     "async": "^2.4.1",
     "body-parser": "^1.17.2",
