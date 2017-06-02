@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "NODE_CONFIG_DIR=\"./node_modules/shapeshift-common-library/config\" node server.js"
+    "start": "NODE_CONFIG_DIR=\"./node_modules/shapeshift-common-library/config\" node server.js",
+    "seedDB": "NODE_CONFIG_DIR=\"./node_modules/shapeshift-common-library/config\" node database/seed.js"
   },
   "repository": {
     "type": "git",
@@ -17,12 +18,15 @@
   },
   "homepage": "https://github.com/DaHarris/shapeshift-external-api#readme",
   "dependencies": {
+    "async": "^2.4.1",
     "body-parser": "^1.17.2",
     "config": "^1.26.1",
     "express": "^4.15.3",
     "mongodb": "^2.2.27",
     "mongoose": "^4.10.4",
     "node-uuid": "^1.4.8",
+    "rabbitmq-wrapper": "git+ssh://git@github.com/DaHarris/rabbitmq-wrapper.git",
+    "request": "^2.81.0",
     "shapeshift-common-library": "git+ssh://git@github.com/DaHarris/shapeshift-common-library.git"
   }
 }
