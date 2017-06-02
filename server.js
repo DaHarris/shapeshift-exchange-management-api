@@ -20,6 +20,10 @@ rabbotWrapper.setQ_Subscription('queue.externalAPIHandler')
 const exchangeUpdater = require('./middleware/exchangeUpdater')
 rabbotWrapper.setHandler('command.externalAPI.updateTicker', exchangeUpdater.updateTicker)
 
+// Routes
+const exchange = require('./middleware/exchange')
+router.route('/').get(exchange.getExchangeRates)
+
 // Start update ticker loop
 const updateManager = require('./lib/updateManager')
 const updateVersion = require('./lib/updateVersion').set()
@@ -27,7 +31,7 @@ updateManager.startUpdateLoop(updateVersion)
 
 // Final Express setup
 app.use(bodyParser.json())
-app.use('/pricing', router)
+app.use('/exchanges', router)
 app.listen(port, () => { console.log('Listening on port: ' + port) })
 
 // Final RabbitMQ setup
