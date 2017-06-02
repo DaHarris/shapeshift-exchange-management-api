@@ -30,6 +30,12 @@ const updateVersion = require('./lib/updateVersion').set()
 updateManager.startUpdateLoop(updateVersion)
 
 // Final Express setup
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE')
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization')
+  next()
+})
 app.use(bodyParser.json())
 app.use('/exchanges', router)
 app.listen(port, () => { console.log('Listening on port: ' + port) })
