@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "NODE_CONFIG_DIR=\"./node_modules/shapeshift-common-library/config\" node server.js",
-    "seedDB": "NODE_CONFIG_DIR=\"./node_modules/shapeshift-common-library/config\" node database/seed.js"
+    "seedDB": "NODE_CONFIG_DIR=\"./node_modules/shapeshift-common-library/config\" node database/seed.js",
+    "dropDB": "NODE_CONFIG_DIR=\"./node_modules/shapeshift-common-library/config\" node database/drop.js"
   },
   "repository": {
     "type": "git",

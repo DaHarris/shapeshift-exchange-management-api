@@ -77,7 +77,7 @@ const exchanges = [
       },
       {
         symbol: BTC_DSH,
-        exchangeSymbol: 'BTC_DASH',
+        exchangeSymbol: 'BTC-DASH',
         longName: BTC_DSH_LONG,
         active: true
       }

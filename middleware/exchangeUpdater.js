@@ -16,7 +16,7 @@ const updateTicker = function (msg) {
           rabbotWrapper.disposeMsg(msg, err)
         } else {
           let corrID = uuid.v4()
-          let delay = 60 * 1000
+          let delay = 5 * 60 * 1000
           rabbotWrapper.updateTicker_Command(exchange, currentVersion, delay, corrID, function (err) {
             if (err) {
               rabbotWrapper.disposeMsg(msg, err)
