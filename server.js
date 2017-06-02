@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const app = express()
 
 // Configuration Setup
-const config = require('shapeshift-common-library')('shapeshift-external-api')
+const config = require('shapeshift-common-library')('shapeshift-exchange-management-api')
 const port = config.get('port')
 const mongoConfig = config.get('mongoDBConnection')
 

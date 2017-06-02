@@ -1,5 +1,5 @@
 const mongo = require('mongodb').MongoClient
-const config = require('shapeshift-common-library')('shapeshift-external-api')
+const config = require('shapeshift-common-library')('shapeshift-exchange-management-api')
 const dbConfig = config.get('mongoDBConnection')
 
 mongo.connect(dbConfig, (err, db) => {
